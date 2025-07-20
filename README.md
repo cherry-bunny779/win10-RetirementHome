@@ -21,13 +21,13 @@ A more sophisticated version of process management than that provided in Task Ma
 
 ##Process Monitor
 http://learn.microsoft.com/en-us/sysinternals/downloads/procmon
-Used for monitoring process CPU, Disk, Internet activity. Again, a more sophisticated version than that
-provided in Task Manager
+Used for monitoring and profiling CPU, Disk, Internet activity of processes. Again, a more sophisticated version than that
+provided in Task Manager. 
 
 ##WinDBG
 https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/
 Used to read crash dump files. I mostly found it useful for fixing Localization/Compatability issues
-for certain visual novels
+for certain visual novels.
 
 ##Synctoy
 _source: none_
