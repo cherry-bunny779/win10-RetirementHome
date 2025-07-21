@@ -37,9 +37,13 @@ To fix this, power off the system and install the SATA Optical Drive, if you hav
 
 I had not internet and bluetooth, which was expected since old drivers likely do not work with the new system. So:
 
-installed new drivers with the USB stick that came with the motherboard (Your motherboard might come with a disk containing the drivers.)
+- installed new drivers with the USB stick that came with the motherboard (Your motherboard might come with a disk containing the drivers.)
 
-make sure NOT to install the “Intel NPU Driver”, it will crash Task Manager if you click the “Performance” tab. If your hand slipped and installed it (like I did), go to Device Manager and disable “Intel(R) Reserved Device” under Compute Accelerators. Crashing issue fixed!
+- make sure NOT to install the “Intel NPU Driver”, it will crash Task Manager if you click the “Performance” tab. If your hand slipped and installed it (like I did), go to Device Manager and disable “Intel(R) Reserved Device” under Compute Accelerators. Crashing issue fixed!
+![NPU-taskmanagererror](./NPU-taskmanagererror-b.PNG.png)
+
+![IntelNPUDevice](./IntelNPUDevice-b.PNG.png)
+
 
 Now enjoy your cozy, tailored Win10 you’ve nurtured and shaped to your liking over the years!
 
