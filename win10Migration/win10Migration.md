@@ -64,3 +64,13 @@ When attempting to hibernate the PC through a remote desktop session, the PC see
 
 Issue with "HYPERVISOE_ERROR" Blue Screen
 Occurred while gaming, although the same program has been running without issue over multiple sessions for over two weeks. I am not sure of the root cause of this issue, but searching the internet the fix seemed straightforward. Run command prompt in admin mode and type in the command "bcdedit /set hypervisorlaunchtype auto". I should of checked the value of this key before setting it to auto, but let's hope this was a fix and be on lookout if this happens again in the future.
+
+Edit 3:
+UNEXPECTED_KERNEL_MODE_TRAP
+
+Blue-screened in the middle of a remote desktop session. Ran 
+>sfc /scannow
+but did not find any corrupt system drivers
+Try checking system boot disk and disk of main program that was running in the remote desktop session
+>chkdsk 'disk letter': /f /r
+continued...
