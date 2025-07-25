@@ -40,6 +40,7 @@ I had not internet and bluetooth, which was expected since old drivers likely do
 - installed new drivers with the USB stick that came with the motherboard (Your motherboard might come with a disk containing the drivers.)
 
 - make sure NOT to install the “Intel NPU Driver”, it will crash Task Manager if you click the “Performance” tab. If your hand slipped and installed it (like I did), go to Device Manager and disable “Intel(R) Reserved Device” under Compute Accelerators. Crashing issue fixed!
+
 ![NPU-taskmanagererror](./NPU-taskmanagererror-b.PNG.png)
 
 ![IntelNPUDevice](./IntelNPUDevice-b.PNG.png)
@@ -70,7 +71,27 @@ UNEXPECTED_KERNEL_MODE_TRAP
 
 Blue-screened in the middle of a remote desktop session. Ran 
 >sfc /scannow
+
 but did not find any corrupt system drivers
 Try checking system boot disk and disk of main program that was running in the remote desktop session
 >chkdsk 'disk letter': /f /r
+
+In Event Viewer, the associated Event:
+> BugcheckCode 127 
+  BugcheckParameter1 0x8 
+  BugcheckParameter2 0xfffff80780f70e70 
+  BugcheckParameter3 0x80f5bad0 
+  BugcheckParameter4 0xfffff80781a177a8 
+  SleepInProgress 0 
+  PowerButtonTimestamp 0 
+  BootAppStatus 0 
+  Checkpoint 0 
+  ConnectedStandbyInProgress false 
+  SystemSleepTransitionsToOn 1 
+  CsEntryScenarioInstanceId 0 
+  BugcheckInfoFromEFI false 
+  CheckpointStatus 0 
+  CsEntryScenarioInstanceIdV2 0 
+  LongPowerButtonPressDetected false 
+
 continued...
