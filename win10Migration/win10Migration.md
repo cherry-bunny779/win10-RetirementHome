@@ -103,6 +103,7 @@ was downloading sth from steam. Installed additional RAM sticks, irrelevent to t
 Observations
 1. It is now obvious the issue is more related to Remote Desktop rather than whatever programs where interacted during the session
 2. The kernel power event is caused by me pressing the restart button/long pressing the power button b.c. the time frozen on system is significantly different than that logged on Event Viewer. Froze at 00:05 and logged kernel power 00:11.
+3. But recently I had RD sessions as long as 5-8 hours without this issue occurring, cause of freeze still indeterminate.
 
 Try
 1. Disabling and reanabling remote desktop
