@@ -94,4 +94,18 @@ In Event Viewer, the associated Event:
   CsEntryScenarioInstanceIdV2 0 
   LongPowerButtonPressDetected false 
 
-continued...
+The above error occured again within 24hrs of doing the first step. Now try checkdisk.
+
+All the above efforts to to resolve the powerkernel issue has failed. 7 occurrences in 7 days.
+The pc went unresponsive again on 7.30 near midnight, during a remote desktop session. The last operation
+was downloading sth from steam. Installed additional RAM sticks, irrelevent to this error.
+
+Observations
+1. It is now obvious the issue is more related to Remote Desktop rather than whatever programs where interacted during the session
+2. The kernel power event is caused by me pressing the restart button/long pressing the power button b.c. the time frozen on system is significantly different than that logged on Event Viewer. Froze at 00:05 and logged kernel power 00:11.
+
+Try
+1. Disabling and reanabling remote desktop
+2. Find the remote desktop server on host and find a way to profile (but both remote desktiop session and host machine are unresponsive)
+3. Use another device to ping the host i.p. address to check liveness. If live, more likely a display driver issue
+4. Try remote desktop in Safe Mode, if the feature is available
