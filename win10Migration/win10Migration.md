@@ -106,7 +106,32 @@ Observations
 3. But recently I had RD sessions as long as 5-8 hours without this issue occurring, cause of freeze still indeterminate.
 
 Try
-1. Disabling and reanabling remote desktop
+1. Disabling and reanabling remote desktop and reboot
 2. Find the remote desktop server on host and find a way to profile (but both remote desktiop session and host machine are unresponsive)
 3. Use another device to ping the host i.p. address to check liveness. If live, more likely a display driver issue
 4. Try remote desktop in Safe Mode, if the feature is available
+5. Try to connect though Parsec
+
+Results
+3. Turned on Control Center -> Network and Sharing Center -> Change Advanced Sharing Settings -> Network Discovery | file and printer sharing
+   to allow response to pings. Tested does not respond to ping
+5. Parsec could not be detected
+
+Note: A Certain Program that uses the _kirikiri_ engine and _Emote_ can cause 100% crash.
+
+Observed the secondary display that runs on integrated graphics shuts down, while main display driven by discrete graphics is on. Suspect issue with integrated graphics driver. Disabled integrated graphics
+
+Need to disable integrated graphics or simply unplug display?
+
+WoWs 100% crashes on RD session, does not enter game or freeze the device. Can terminate with suspected exception
+
+Fixed:
+Disabling Integrated Graphics fixed the issue where that Program would expectingly crash. However, artifacts caused by error could be found within and around the Program's window. Soft errors still exist.
+
+Conclusions:
+- Kernel Power error is not the cause of system freeze during RD session.
+- Intel Integrated Graphics driver/device causes certain programs to freeze the entire system when attempting to run during RD session. Disabling the device avoids freezing, but minor graphical artifacts still exist.
+  
+- Do other _kirikiri/Emote_ programs cause the same error?
+
+- Problem only occurs during RD session, how to let RD hardware acceleration use only descrete graphics? (To avoid disabling Integrated Graphics/unplugging)
