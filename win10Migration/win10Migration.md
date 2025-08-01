@@ -134,4 +134,4 @@ Conclusions:
   
 - Do other _kirikiri/Emote_ programs cause the same error?
 
-- Problem only occurs during RD session, how to let RD hardware acceleration use only descrete graphics? (To avoid disabling Integrated Graphics/unplugging)
+- Problem only occurs during RD session, how to let RD hardware acceleration use only descrete graphics? (To avoid disabling Integrated Graphics/unplugging).
