@@ -10,7 +10,7 @@ echo.
 echo Enter Commands Before Main Script
 set /p USERCMD=Enter a command to run: 
 
-if /I "%USERCMD%"=="done" (
+if /I "%USERCMD%"=="" (
     echo.
     echo Exiting custom command mode...
     echo.
@@ -57,6 +57,11 @@ for /D /R "%STARTDIR%" %%G in (*) do (
 echo.
 echo Total items printed: %totalCount%
 echo.
+set /p CTNU=Continue? (type 'c' to continue...):
+if /I "%CTNU%"=="c" (
+    REM Go back to start of script
+    goto custom_loop
+)
 echo Done.
 pause
 exit /b
