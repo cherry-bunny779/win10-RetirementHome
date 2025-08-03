@@ -8,9 +8,9 @@ echo.
 echo Welcome to Fixed Depth File List!
 echo.
 echo Enter Commands Before Main Script
-set /p USERCMD=Enter a command to run: 
+set /p USERCMD=Enter a command to run: (type 'e' to exit)
 
-if /I "%USERCMD%"=="" (
+if /I "%USERCMD%"=="e" (
     echo.
     echo Exiting custom command mode...
     echo.
