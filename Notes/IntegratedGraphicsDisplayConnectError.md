@@ -2,7 +2,7 @@ __Keywords__: Multiple Displays; Integrated Graphics; Driver; Thunderbolt; Setti
 
 Upon starting the Windows 10 PC from certain power states, it is observed that dispalys that are driven though a physical thunderbolt 4 port would fail to connect.
 
-Dislay configuration;
+Display configuration;
 
 Display 1 is a 1920x1080 portable display connected to the PC though a thunderbolt 5 port (running thunderbolt 4) on the motherboard. It is connected to CPU integrated graphics
 
