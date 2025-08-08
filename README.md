@@ -1,4 +1,4 @@
-Win10 Retirement Home
+Windows 10 Retirement Home
 ===============================
 
 About
