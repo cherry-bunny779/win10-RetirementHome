@@ -1,5 +1,9 @@
-__Keywords__: Integrated Graphics; Driver; Issue; Solved
+__Keywords__: Integrated Graphics; Driver; Remote Desktop; Issue; Unresolved
 
 During running a graphics/memory intensive program, the system often crashes with the display connected to the integrated graphics loss of signal. Suspect yet another driver issue with integrated graphics. The hardware configuration is discussed in [another post.](IntegratedGraphicsDisplayConnectError.md)
 
 This problem seems to be a driver issue. Uninstalled integrated graphics driver (previously installed by USB stick that came with the motherboard/'automatic' install) and reinstalled from Intel's website. Have not observed similar issue though 5 days upon installing the new driver
+
+Update:
+Running certain programs during a Remote Desktop session will cause the entire system to freeze. This is caused by the Intel Graphics Driver Version 32.0.101.6987 and Intel Integrated Graphics. For certain programs that have a startup menu item to choose a specific hardware graphics accelerator, only Intel Integrated Graphics is detected although a discrete graphics accelerator is installed and enabled. Thus, I suspect _the Remote Desktop program prioritizes Integrated Graphics_. Interestingly, disabling the integrated graphics device via Remote Desktop though Device Manager will not cause issues when a discrete graphics is present -- it will automatically switch to discrete graphics. Notably, a Virtual Display Adapter will appear in the devices list during the Remote Desktop session.
+As of now, only a reboot could solve this issue, and a critical Kernel Power associated with this action is logged in Events Viewer.
