@@ -7,3 +7,6 @@ This problem seems to be a driver issue. Uninstalled integrated graphics driver 
 Update:
 Running certain programs during a Remote Desktop session will cause the entire system to freeze. This is caused by the Intel Graphics Driver Version 32.0.101.6987 and Intel Integrated Graphics. For certain programs that have a startup menu item to choose a specific hardware graphics accelerator, only Intel Integrated Graphics is detected although a discrete graphics accelerator is installed and enabled. Thus, I suspect _the Remote Desktop program prioritizes Integrated Graphics_. Interestingly, disabling the integrated graphics device via Remote Desktop though Device Manager will not cause issues when a discrete graphics is present -- it will automatically switch to discrete graphics. Notably, a Virtual Display Adapter will appear in the devices list during the Remote Desktop session.
 As of now, only a reboot could solve this issue, and a critical Kernel Power associated with this action is logged in Events Viewer.
+
+Update2:
+System froze twice during build of a certain package under WSL. Integrated Graphics was disabled, __suspect memory integrity issue or discrete graphics driver issue__. 4 sticks of trident z5 f5-6400j3239g16ga2-tz5rk memory modules were installed.
